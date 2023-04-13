@@ -32,12 +32,12 @@ function(x, api.key, api.region, source.lang = NULL, target.lang){
     # This is cleaner with purrr, but extra dependency is overkill for 1 line
     # translations <- map_chr(contents, pluck, "translations", 1, "text")
     #translations <- vapply(
-      contents,
-      function(x) x[["translations"]][[1]][["text"]],
-      character(1L)
-    )
-    return(translations)
-    contents
+      #contents,
+      #function(x) x[["translations"]][[1]][["text"]],
+      #character(1L)
+    #)
+    #return(translations)
+   # contents
 
 }#
 translations=contents 
