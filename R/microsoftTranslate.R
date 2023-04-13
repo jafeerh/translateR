@@ -9,7 +9,7 @@ function(x, api.key, api.region, source.lang = NULL, target.lang){
     }
     target.lang <- match.arg(target.lang, microsoft_langs)
     
-    base_url <- "https://api.cognitive.microsofttranslator.com/translate"
+    base_url <- "https://api.cognitive.microsofttranslator.com/"
     body <- data.frame(Text = x)
     query = list(
       "api-version" = "3.0",
