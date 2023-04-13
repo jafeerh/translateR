@@ -31,13 +31,13 @@ function(x, api.key, api.region, source.lang = NULL, target.lang){
     contents <- httr::content(response)
     # This is cleaner with purrr, but extra dependency is overkill for 1 line
     # translations <- map_chr(contents, pluck, "translations", 1, "text")
-    #translations <- vapply(
-      #contents,
-      #function(x) x[["translations"]][[1]][["text"]],
-      #character(1L)
-    #)
+    translations <- vapply(
+      contents,
+      function(x) x[["translations"]][[1]][["text"]],
+      character(1L)
+    )
     
-    translations=contents 
+    #translations=contents 
     return(translations)
     contents
 
