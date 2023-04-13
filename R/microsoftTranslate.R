@@ -31,7 +31,7 @@ function(x, api.key, api.region, source.lang = NULL, target.lang){
     contents <- httr::content(response)
     # This is cleaner with purrr, but extra dependency is overkill for 1 line
     # translations <- map_chr(contents, pluck, "translations", 1, "text")
-    translations <- vapply(
+    #translations <- vapply(
       contents,
       function(x) x[["translations"]][[1]][["text"]],
       character(1L)
@@ -39,8 +39,8 @@ function(x, api.key, api.region, source.lang = NULL, target.lang){
     return(translations)
     contents
 
-}
-
+}#
+translations=contents 
 checkText <- function(x) {
   if(length(x) > 100) {
     stop("A maximum of 100 strings can be translated at once.")
