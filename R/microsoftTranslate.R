@@ -39,7 +39,7 @@ function(x, api.key, api.region, source.lang = NULL, target.lang){
     #return(translations)
    # contents
 
-}#
+#}
 translations=contents 
 checkText <- function(x) {
   if(length(x) > 100) {
