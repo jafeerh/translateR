@@ -36,11 +36,13 @@ function(x, api.key, api.region, source.lang = NULL, target.lang){
       #function(x) x[["translations"]][[1]][["text"]],
       #character(1L)
     #)
-    #return(translations)
-   # contents
+    
+    translations=contents 
+    return(translations)
+    contents
 
-#}
-translations=contents 
+}
+
 checkText <- function(x) {
   if(length(x) > 100) {
     stop("A maximum of 100 strings can be translated at once.")
